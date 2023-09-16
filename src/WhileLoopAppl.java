@@ -4,7 +4,9 @@ public class WhileLoopAppl {
         // printOdd(10, 20);
 //        double res = pow(2, 4);
 //        System.out.println("Pow = " + res);
-        double res = countDigits(0);
+        int res = countDigits(547896220);
+        System.out.println(res);
+        res = countDigits(0);
         System.out.println(res);
     }
 
@@ -28,17 +30,12 @@ public class WhileLoopAppl {
     }
 
     public static double pow(double a, int n) {
-//        if (n==0){
-//            return 1;
-//        }
-        // double res = a;
         double res = 1;
         int i = 1;
         while (i <= n) {
             res = res * a;
             i++;
         }
-        // return n==0?1:res;
         return res;
     }
 
@@ -51,7 +48,11 @@ public class WhileLoopAppl {
         }
         return res;
     }
-    public static int countDigits(int num){
+
+    public static int countDigits(int num) {
+        if (num == 0) {
+            return 1;
+        }
         int res = 0;
         while (num != 0) {
             num = num / 10;
@@ -59,4 +60,6 @@ public class WhileLoopAppl {
         }
         return res;
     }
+
 }
+
